@@ -1,0 +1,9 @@
+CHIP HalfAdder {
+    IN a, b;    // 1-bit inputs
+    OUT sum,    // The sum of a and b
+        carry;  // The carry-out
+
+    PARTS:
+    Xor(a=a, b=b, out=sum);  // Sum is the result of the XOR gate
+    And(a=a, b=b, out=carry); // Carry is the result of the AND gate
+}
